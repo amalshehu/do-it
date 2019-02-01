@@ -1,20 +1,26 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Todos/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Todos from "./components/Todos.vue";
 
 export default {
   name: "app",
   components: {
     Todos
   },
-  todos: [
-    { id: 1, title: "Setup vue cli", done: true },
-    { id: 2, title: "App scaffholding", done: true },
-    { id: 3, title: "Component generation", done: false }
-  ]
+  data() {
+    return {
+      todos: [
+        { id: 1, title: "Setup vue cli", done: true },
+        { id: 2, title: "App scaffholding", done: true },
+        { id: 3, title: "Component generation", done: false }
+      ]
+    };
+  }
 };
 </script>
  
