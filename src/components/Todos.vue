@@ -1,14 +1,16 @@
 <template>
   <div>
     <div v-bind:key="todo.id" v-for="todo in todos">
-      <h2>{{todo.title}}</h2>
+      <Todo v-bind:todo="todo"/>
     </div>
   </div>
 </template>
 
 <script>
+import Todo from "./Todo";
 export default {
   name: "Todos",
+  components: { Todo },
   props: ["todos"]
 };
 </script>
